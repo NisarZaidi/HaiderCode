@@ -1,20 +1,12 @@
-    export const Home = ()=>{
-        return (
-            <>
-            <div>
-                
-                 <h1>thise Home page</h1>
-                 <h1>thise Home page</h1>
-                 <h1>thise Home page</h1>
-                 <h1>thise Home page</h1>
-                 <h1>thise Home page</h1>
-            
-            
-            
-            </div>
+import { Carouselslider } from "./Carousel"
 
 
-
-            </>
-        )
-    }
+export const Home = () => {
+    return (
+        // <>
+        <>
+<Carouselslider/>
+<h1>this home</h1>
+        // </>
+    )
+}

@@ -1,11 +1,17 @@
+// import { Carousel } from "bootstrap"
 import { CardItem } from "./CardItem"
+import { Carouselslider } from "./Carousel"
 
-export const About = ()=>{
+export const About = ({ onCardClicks }) => {
+    const handleCardClick = (item) => {
+        onCardClicks(item)
+    };
     return (
-    <>
-    <div> <h1>thise About page</h1></div>
-    <CardItem />
-    
-    </>
+        <>
+            <Carouselslider />
+            <div> <h1>thise About page</h1></div>
+            <CardItem onCardClick={handleCardClick} />
+
+        </>
     )
 }

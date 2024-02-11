@@ -8,6 +8,7 @@ import { Dashboard } from './componant/dashboard';
 import { Login } from './componant/Login';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Footer } from './componant/Footer';
+import Addcard from './componant/addcard';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -20,6 +21,10 @@ function App() {
     setIsLoggedIn(false);
   };
 
+  const handleCardClick = (item) => {
+    onCardClicks(item)
+};
+
   return (
     <Router>
       <ToastContainer />
@@ -27,7 +32,8 @@ function App() {
       <Routes>
 {/* public pages */}
         <Route path='/' element={<Home />} />
-        <Route path='/about' element={<About />} />
+        <Route path='/about' element={<About onCardClick={item}/>} />
+        <Route path='/addcard' element={<Addcard onCardClick={item}/>} />
 {/* public pages */}
 
 {/* private pages */}
